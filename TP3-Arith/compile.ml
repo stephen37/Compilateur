@@ -90,11 +90,19 @@ let built_ins () =
   @@ syscall
   @@ push zero
   @@ jr ra
+    
+  (* À compléter avec le code de [print_int]. *)
+  @@ label "print_int"
+  @@ lw  a0 areg (0, sp)
+  @@ add sp sp oi 4
+  @@ li  v0 1
+  @@ syscall
+  @@ jr ra
+    
 
-(* À compléter avec le code de [print_int]. *)
-
-
-
+    
+    
+    
     
 (* La compilation du programme produit un code en trois parties :
    1/ Le code principal (label "main")

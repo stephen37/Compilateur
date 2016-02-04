@@ -751,7 +751,7 @@ type(
   unit -> Mips.text
 )
 ident(
-  def built_ins "compile.ml" 104 2336 2336 "compile.ml" 1 0 -1
+  def built_ins "compile.ml" 112 2466 2466 "compile.ml" 1 0 -1
 )
 "compile.ml" 85 1941 1955 "compile.ml" 85 1941 1957
 type(
@@ -937,379 +937,617 @@ call(
 type(
   Mips.text
 )
-"compile.ml" 91 2039 2044 "compile.ml" 92 2054 2064
-call(
-  stack
-)
-type(
-  Mips.text
-)
-"compile.ml" 90 2026 2031 "compile.ml" 92 2054 2064
-call(
-  stack
-)
-type(
-  Mips.text
-)
-"compile.ml" 89 2012 2017 "compile.ml" 92 2054 2064
-call(
-  stack
-)
-type(
-  Mips.text
-)
-"compile.ml" 88 1998 2003 "compile.ml" 92 2054 2064
-call(
-  stack
-)
-type(
-  Mips.text
-)
-"compile.ml" 87 1984 1989 "compile.ml" 92 2054 2064
-call(
-  stack
-)
-type(
-  Mips.text
-)
-"compile.ml" 86 1960 1962 "compile.ml" 92 2054 2064
-call(
-  tail
-)
-type(
-  Mips.text
-)
-"compile.ml" 104 2336 2340 "compile.ml" 104 2336 2352
-type(
-  'a list -> Mips.program
-)
-ident(
-  def compile_prog "compile.ml" 123 2669 2672 "compile.ml" 1 0 -1
-)
-"compile.ml" 104 2336 2353 "compile.ml" 104 2336 2354
-type(
-  'a list
-)
-ident(
-  def p "compile.ml" 105 2357 2359 "compile.ml" 123 2669 2672
-)
-"compile.ml" 105 2357 2363 "compile.ml" 105 2357 2372
-type(
-  [ `text ] Mips.asm
-)
-ident(
-  def main_code "compile.ml" 106 2399 2401 "compile.ml" 123 2669 2672
-)
-"compile.ml" 105 2357 2375 "compile.ml" 105 2357 2393
-type(
-  'a list -> [ `text ] Mips.asm
-)
-ident(
-  int_ref compile_instr_list "compile.ml" 73 1705 1713 "compile.ml" 73 1705 1731
-)
-"compile.ml" 105 2357 2394 "compile.ml" 105 2357 2395
-type(
-  'a list
-)
-ident(
-  int_ref p "compile.ml" 104 2336 2353 "compile.ml" 104 2336 2354
-)
-"compile.ml" 105 2357 2375 "compile.ml" 105 2357 2395
-call(
-  stack
-)
-type(
-  [ `text ] Mips.asm
-)
-"compile.ml" 106 2399 2405 "compile.ml" 106 2399 2419
-type(
-  Mips.text
-)
-ident(
-  def built_ins_code "compile.ml" 108 2441 2443 "compile.ml" 123 2669 2672
-)
-"compile.ml" 106 2399 2422 "compile.ml" 106 2399 2431
-type(
-  unit -> Mips.text
-)
-ident(
-  int_ref built_ins "compile.ml" 85 1941 1945 "compile.ml" 85 1941 1954
-)
-"compile.ml" 106 2399 2432 "compile.ml" 106 2399 2434
-type(
-  unit
-)
-"compile.ml" 106 2399 2422 "compile.ml" 106 2399 2434
-call(
-  stack
-)
-type(
-  Mips.text
-)
-"compile.ml" 109 2452 2457 "compile.ml" 109 2452 2464
-type(
-  string -> Mips.text
-)
-ident(
-  ext_ref Mips.comment
-)
-"compile.ml" 109 2452 2465 "compile.ml" 109 2452 2481
-type(
-  string
-)
-"compile.ml" 109 2452 2457 "compile.ml" 109 2452 2481
-call(
-  stack
-)
-type(
-  Mips.text
-)
-"compile.ml" 110 2482 2484 "compile.ml" 110 2482 2486
+"compile.ml" 95 2121 2123 "compile.ml" 95 2121 2125
 type(
   Mips.text -> Mips.text -> Mips.text
 )
 ident(
   ext_ref Mips.( @@ )
 )
-"compile.ml" 110 2482 2487 "compile.ml" 110 2482 2492
+"compile.ml" 95 2121 2126 "compile.ml" 95 2121 2131
 type(
   Mips.label -> Mips.text
 )
 ident(
   ext_ref Mips.label
 )
-"compile.ml" 110 2482 2493 "compile.ml" 110 2482 2499
+"compile.ml" 95 2121 2132 "compile.ml" 95 2121 2143
 type(
   Mips.label
 )
-"compile.ml" 110 2482 2487 "compile.ml" 110 2482 2499
+"compile.ml" 95 2121 2126 "compile.ml" 95 2121 2143
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 111 2500 2502 "compile.ml" 111 2500 2504
+"compile.ml" 96 2144 2146 "compile.ml" 96 2144 2148
 type(
   Mips.text -> Mips.text -> Mips.text
 )
 ident(
   ext_ref Mips.( @@ )
 )
-"compile.ml" 111 2500 2505 "compile.ml" 111 2500 2514
+"compile.ml" 96 2144 2149 "compile.ml" 96 2144 2151
 type(
-  Mips.text
+  Mips.register ->
+  (int * Mips.register) Mips.address -> int * Mips.register -> Mips.text
 )
 ident(
-  int_ref main_code "compile.ml" 105 2357 2363 "compile.ml" 105 2357 2372
+  ext_ref Mips.lw
 )
-"compile.ml" 113 2523 2525 "compile.ml" 113 2523 2527
+"compile.ml" 96 2144 2153 "compile.ml" 96 2144 2155
 type(
-  Mips.text -> Mips.text -> Mips.text
+  Mips.register
 )
 ident(
-  ext_ref Mips.( @@ )
+  ext_ref Mips.a0
 )
-"compile.ml" 113 2523 2528 "compile.ml" 113 2523 2535
+"compile.ml" 96 2144 2156 "compile.ml" 96 2144 2160
 type(
-  string -> Mips.text
+  (int * Mips.register) Mips.address
 )
 ident(
-  ext_ref Mips.comment
+  ext_ref Mips.areg
 )
-"compile.ml" 113 2523 2536 "compile.ml" 113 2523 2541
+"compile.ml" 96 2144 2162 "compile.ml" 96 2144 2163
 type(
-  string
+  int
 )
-"compile.ml" 113 2523 2528 "compile.ml" 113 2523 2541
+"compile.ml" 96 2144 2165 "compile.ml" 96 2144 2167
+type(
+  Mips.register
+)
+ident(
+  ext_ref Mips.sp
+)
+"compile.ml" 96 2144 2161 "compile.ml" 96 2144 2168
+type(
+  int * Mips.register
+)
+"compile.ml" 96 2144 2149 "compile.ml" 96 2144 2168
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 114 2542 2544 "compile.ml" 114 2542 2546
+"compile.ml" 97 2169 2171 "compile.ml" 97 2169 2173
 type(
   Mips.text -> Mips.text -> Mips.text
 )
 ident(
   ext_ref Mips.( @@ )
 )
-"compile.ml" 114 2542 2547 "compile.ml" 114 2542 2552
+"compile.ml" 97 2169 2174 "compile.ml" 97 2169 2177
 type(
-  Mips.label -> Mips.text
+  Mips.register -> Mips.register -> int Mips.operand -> int -> Mips.text
 )
 ident(
-  ext_ref Mips.label
+  ext_ref Mips.add
 )
-"compile.ml" 114 2542 2553 "compile.ml" 114 2542 2563
+"compile.ml" 97 2169 2178 "compile.ml" 97 2169 2180
 type(
-  Mips.label
+  Mips.register
 )
-"compile.ml" 114 2542 2547 "compile.ml" 114 2542 2563
+ident(
+  ext_ref Mips.sp
+)
+"compile.ml" 97 2169 2181 "compile.ml" 97 2169 2183
+type(
+  Mips.register
+)
+ident(
+  ext_ref Mips.sp
+)
+"compile.ml" 97 2169 2184 "compile.ml" 97 2169 2186
+type(
+  int Mips.operand
+)
+ident(
+  ext_ref Mips.oi
+)
+"compile.ml" 97 2169 2187 "compile.ml" 97 2169 2188
+type(
+  int
+)
+"compile.ml" 97 2169 2174 "compile.ml" 97 2169 2188
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 115 2564 2566 "compile.ml" 115 2564 2568
+"compile.ml" 98 2189 2191 "compile.ml" 98 2189 2193
 type(
   Mips.text -> Mips.text -> Mips.text
 )
 ident(
   ext_ref Mips.( @@ )
 )
-"compile.ml" 115 2564 2569 "compile.ml" 115 2564 2571
+"compile.ml" 98 2189 2194 "compile.ml" 98 2189 2196
 type(
   Mips.register -> int -> Mips.text
 )
 ident(
   ext_ref Mips.li
 )
-"compile.ml" 115 2564 2572 "compile.ml" 115 2564 2574
+"compile.ml" 98 2189 2198 "compile.ml" 98 2189 2200
 type(
   Mips.register
 )
 ident(
   ext_ref Mips.v0
 )
-"compile.ml" 115 2564 2575 "compile.ml" 115 2564 2577
+"compile.ml" 98 2189 2201 "compile.ml" 98 2189 2202
 type(
   int
 )
-"compile.ml" 115 2564 2569 "compile.ml" 115 2564 2577
+"compile.ml" 98 2189 2194 "compile.ml" 98 2189 2202
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 116 2578 2580 "compile.ml" 116 2578 2582
+"compile.ml" 99 2203 2205 "compile.ml" 99 2203 2207
 type(
   Mips.text -> Mips.text -> Mips.text
 )
 ident(
   ext_ref Mips.( @@ )
 )
-"compile.ml" 116 2578 2583 "compile.ml" 116 2578 2590
+"compile.ml" 99 2203 2208 "compile.ml" 99 2203 2215
 type(
   Mips.text
 )
 ident(
   ext_ref Mips.syscall
 )
-"compile.ml" 118 2599 2601 "compile.ml" 118 2599 2603
+"compile.ml" 100 2216 2218 "compile.ml" 100 2216 2220
 type(
   Mips.text -> Mips.text -> Mips.text
 )
 ident(
   ext_ref Mips.( @@ )
 )
-"compile.ml" 118 2599 2604 "compile.ml" 118 2599 2611
+"compile.ml" 100 2216 2221 "compile.ml" 100 2216 2223
+type(
+  Mips.register -> Mips.text
+)
+ident(
+  ext_ref Mips.jr
+)
+"compile.ml" 100 2216 2224 "compile.ml" 100 2216 2226
+type(
+  Mips.register
+)
+ident(
+  ext_ref Mips.ra
+)
+"compile.ml" 100 2216 2221 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 99 2203 2208 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 98 2189 2194 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 97 2169 2174 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 96 2144 2149 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 95 2121 2126 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 92 2054 2059 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 91 2039 2044 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 90 2026 2031 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 89 2012 2017 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 88 1998 2003 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 87 1984 1989 "compile.ml" 100 2216 2226
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 86 1960 1962 "compile.ml" 100 2216 2226
+call(
+  tail
+)
+type(
+  Mips.text
+)
+"compile.ml" 112 2466 2470 "compile.ml" 112 2466 2482
+type(
+  'a list -> Mips.program
+)
+ident(
+  def compile_prog "compile.ml" 131 2799 2802 "compile.ml" 1 0 -1
+)
+"compile.ml" 112 2466 2483 "compile.ml" 112 2466 2484
+type(
+  'a list
+)
+ident(
+  def p "compile.ml" 113 2487 2489 "compile.ml" 131 2799 2802
+)
+"compile.ml" 113 2487 2493 "compile.ml" 113 2487 2502
+type(
+  [ `text ] Mips.asm
+)
+ident(
+  def main_code "compile.ml" 114 2529 2531 "compile.ml" 131 2799 2802
+)
+"compile.ml" 113 2487 2505 "compile.ml" 113 2487 2523
+type(
+  'a list -> [ `text ] Mips.asm
+)
+ident(
+  int_ref compile_instr_list "compile.ml" 73 1705 1713 "compile.ml" 73 1705 1731
+)
+"compile.ml" 113 2487 2524 "compile.ml" 113 2487 2525
+type(
+  'a list
+)
+ident(
+  int_ref p "compile.ml" 112 2466 2483 "compile.ml" 112 2466 2484
+)
+"compile.ml" 113 2487 2505 "compile.ml" 113 2487 2525
+call(
+  stack
+)
+type(
+  [ `text ] Mips.asm
+)
+"compile.ml" 114 2529 2535 "compile.ml" 114 2529 2549
+type(
+  Mips.text
+)
+ident(
+  def built_ins_code "compile.ml" 116 2571 2573 "compile.ml" 131 2799 2802
+)
+"compile.ml" 114 2529 2552 "compile.ml" 114 2529 2561
+type(
+  unit -> Mips.text
+)
+ident(
+  int_ref built_ins "compile.ml" 85 1941 1945 "compile.ml" 85 1941 1954
+)
+"compile.ml" 114 2529 2562 "compile.ml" 114 2529 2564
+type(
+  unit
+)
+"compile.ml" 114 2529 2552 "compile.ml" 114 2529 2564
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 117 2582 2587 "compile.ml" 117 2582 2594
 type(
   string -> Mips.text
 )
 ident(
   ext_ref Mips.comment
 )
-"compile.ml" 118 2599 2612 "compile.ml" 118 2599 2624
+"compile.ml" 117 2582 2595 "compile.ml" 117 2582 2611
 type(
   string
 )
-"compile.ml" 118 2599 2604 "compile.ml" 118 2599 2624
+"compile.ml" 117 2582 2587 "compile.ml" 117 2582 2611
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 119 2625 2627 "compile.ml" 119 2625 2629
+"compile.ml" 118 2612 2614 "compile.ml" 118 2612 2616
 type(
   Mips.text -> Mips.text -> Mips.text
 )
 ident(
   ext_ref Mips.( @@ )
 )
-"compile.ml" 119 2625 2630 "compile.ml" 119 2625 2644
+"compile.ml" 118 2612 2617 "compile.ml" 118 2612 2622
+type(
+  Mips.label -> Mips.text
+)
+ident(
+  ext_ref Mips.label
+)
+"compile.ml" 118 2612 2623 "compile.ml" 118 2612 2629
+type(
+  Mips.label
+)
+"compile.ml" 118 2612 2617 "compile.ml" 118 2612 2629
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 119 2630 2632 "compile.ml" 119 2630 2634
+type(
+  Mips.text -> Mips.text -> Mips.text
+)
+ident(
+  ext_ref Mips.( @@ )
+)
+"compile.ml" 119 2630 2635 "compile.ml" 119 2630 2644
 type(
   Mips.text
 )
 ident(
-  int_ref built_ins_code "compile.ml" 106 2399 2405 "compile.ml" 106 2399 2419
+  int_ref main_code "compile.ml" 113 2487 2493 "compile.ml" 113 2487 2502
 )
-"compile.ml" 118 2599 2604 "compile.ml" 119 2625 2644
+"compile.ml" 121 2653 2655 "compile.ml" 121 2653 2657
+type(
+  Mips.text -> Mips.text -> Mips.text
+)
+ident(
+  ext_ref Mips.( @@ )
+)
+"compile.ml" 121 2653 2658 "compile.ml" 121 2653 2665
+type(
+  string -> Mips.text
+)
+ident(
+  ext_ref Mips.comment
+)
+"compile.ml" 121 2653 2666 "compile.ml" 121 2653 2671
+type(
+  string
+)
+"compile.ml" 121 2653 2658 "compile.ml" 121 2653 2671
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 116 2578 2583 "compile.ml" 119 2625 2644
+"compile.ml" 122 2672 2674 "compile.ml" 122 2672 2676
+type(
+  Mips.text -> Mips.text -> Mips.text
+)
+ident(
+  ext_ref Mips.( @@ )
+)
+"compile.ml" 122 2672 2677 "compile.ml" 122 2672 2682
+type(
+  Mips.label -> Mips.text
+)
+ident(
+  ext_ref Mips.label
+)
+"compile.ml" 122 2672 2683 "compile.ml" 122 2672 2693
+type(
+  Mips.label
+)
+"compile.ml" 122 2672 2677 "compile.ml" 122 2672 2693
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 115 2564 2569 "compile.ml" 119 2625 2644
+"compile.ml" 123 2694 2696 "compile.ml" 123 2694 2698
+type(
+  Mips.text -> Mips.text -> Mips.text
+)
+ident(
+  ext_ref Mips.( @@ )
+)
+"compile.ml" 123 2694 2699 "compile.ml" 123 2694 2701
+type(
+  Mips.register -> int -> Mips.text
+)
+ident(
+  ext_ref Mips.li
+)
+"compile.ml" 123 2694 2702 "compile.ml" 123 2694 2704
+type(
+  Mips.register
+)
+ident(
+  ext_ref Mips.v0
+)
+"compile.ml" 123 2694 2705 "compile.ml" 123 2694 2707
+type(
+  int
+)
+"compile.ml" 123 2694 2699 "compile.ml" 123 2694 2707
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 114 2542 2547 "compile.ml" 119 2625 2644
+"compile.ml" 124 2708 2710 "compile.ml" 124 2708 2712
+type(
+  Mips.text -> Mips.text -> Mips.text
+)
+ident(
+  ext_ref Mips.( @@ )
+)
+"compile.ml" 124 2708 2713 "compile.ml" 124 2708 2720
+type(
+  Mips.text
+)
+ident(
+  ext_ref Mips.syscall
+)
+"compile.ml" 126 2729 2731 "compile.ml" 126 2729 2733
+type(
+  Mips.text -> Mips.text -> Mips.text
+)
+ident(
+  ext_ref Mips.( @@ )
+)
+"compile.ml" 126 2729 2734 "compile.ml" 126 2729 2741
+type(
+  string -> Mips.text
+)
+ident(
+  ext_ref Mips.comment
+)
+"compile.ml" 126 2729 2742 "compile.ml" 126 2729 2754
+type(
+  string
+)
+"compile.ml" 126 2729 2734 "compile.ml" 126 2729 2754
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 113 2523 2528 "compile.ml" 119 2625 2644
+"compile.ml" 127 2755 2757 "compile.ml" 127 2755 2759
+type(
+  Mips.text -> Mips.text -> Mips.text
+)
+ident(
+  ext_ref Mips.( @@ )
+)
+"compile.ml" 127 2755 2760 "compile.ml" 127 2755 2774
+type(
+  Mips.text
+)
+ident(
+  int_ref built_ins_code "compile.ml" 114 2529 2535 "compile.ml" 114 2529 2549
+)
+"compile.ml" 126 2729 2734 "compile.ml" 127 2755 2774
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 111 2500 2505 "compile.ml" 119 2625 2644
+"compile.ml" 124 2708 2713 "compile.ml" 127 2755 2774
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 110 2482 2487 "compile.ml" 119 2625 2644
+"compile.ml" 123 2694 2699 "compile.ml" 127 2755 2774
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 109 2452 2457 "compile.ml" 119 2625 2644
+"compile.ml" 122 2672 2677 "compile.ml" 127 2755 2774
 call(
   stack
 )
 type(
   Mips.text
 )
-"compile.ml" 122 2654 2665 "compile.ml" 122 2654 2668
+"compile.ml" 121 2653 2658 "compile.ml" 127 2755 2774
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 119 2630 2635 "compile.ml" 127 2755 2774
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 118 2612 2617 "compile.ml" 127 2755 2774
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 117 2582 2587 "compile.ml" 127 2755 2774
+call(
+  stack
+)
+type(
+  Mips.text
+)
+"compile.ml" 130 2784 2795 "compile.ml" 130 2784 2798
 type(
   Mips.data
 )
 ident(
   ext_ref Mips.nop
 )
-"compile.ml" 108 2441 2443 "compile.ml" 123 2669 2672
+"compile.ml" 116 2571 2573 "compile.ml" 131 2799 2802
 type(
   Mips.program
 )
-"compile.ml" 106 2399 2401 "compile.ml" 123 2669 2672
+"compile.ml" 114 2529 2531 "compile.ml" 131 2799 2802
 type(
   Mips.program
 )
-"compile.ml" 105 2357 2359 "compile.ml" 123 2669 2672
+"compile.ml" 113 2487 2489 "compile.ml" 131 2799 2802
 type(
   Mips.program
 )
