@@ -51,6 +51,43 @@ let rec compile_expr e =
 	| _           -> not_implemented() 
     end
 
+    | Eunop (op, exp) ->
+      let e_code = compile_expr exp in
+      li t1 e_code 
+      @@ li t2 e_code
+      @@ sub t1 t1 t2
+      @@ sub t1 t1 t2
+      @@ push t1
+
+	
+    | Ebinop (op, exp1, exp2) ->
+      let e1_code = compile_expr exp1 in
+      let e2_code = compile_expr exp2 in
+      match op with
+      | Badd ->
+	li t1 e1_code
+	@@ li t2 e2_code
+	@@ add t1 t1 t2
+	@@ push t1
+      | Bsub ->
+	li t1 e1_code
+	@@ li t2 e2_code
+	@@ sub t1 t1 t2
+	@@ push t1
+      | Bmul ->
+	li t1 e1_code
+	@@ li t2 e2_code
+	@@ mul t1 t1 t2
+	@@ push t1
+      | Bdiv ->
+	li t1 e1_code
+	@@ li t2 e2_code
+	@@ div t1 t1 t2
+	@@ push t1
+	
+      
+
+      
     (* Pour l'affichage, on calcul la valeur de l'argument, puis on saute au
        fragment de code gérant l'affichage proprement dit. *)
     | Eprint_newline e ->
@@ -63,7 +100,7 @@ let rec compile_expr e =
       let e_code = compile_expr e in
       e_code
       @@ jal "print_int"
-	
+
     | _ -> not_implemented()
 	
 
@@ -75,7 +112,9 @@ let rec compile_instr_list il =
     | []       -> nop
 
     (* À compléter pour le cas [Icompute] et l'itération. *)
-
+    |  e::r -> match e with
+      | Icompute a -> (compile_expr a) @@ (compile_instr_list r)
+      
     | _ -> not_implemented()
 
 
